@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -42,6 +42,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D0105F82268F5816006C40D7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D0105F83268F581D006C40D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D0105F84268F5820006C40D7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D01ECE1B268B16C8004904C7 /* ViewController.swift */,
+				D0105F86268F5840006C40D7 /* Delegates */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D0105F85268F5825006C40D7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D01ECE1D268B16C8004904C7 /* Main.storyboard */,
+				D01ECE22268B16C9004904C7 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D0105F86268F5840006C40D7 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				D01ECE17268B16C8004904C7 /* AppDelegate.swift */,
+				D01ECE19268B16C8004904C7 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		D01ECE0B268B16C8004904C7 = {
 			isa = PBXGroup;
 			children = (
@@ -63,12 +104,11 @@
 		D01ECE16268B16C8004904C7 /* SolarX */ = {
 			isa = PBXGroup;
 			children = (
-				D01ECE17268B16C8004904C7 /* AppDelegate.swift */,
-				D01ECE19268B16C8004904C7 /* SceneDelegate.swift */,
-				D01ECE1B268B16C8004904C7 /* ViewController.swift */,
-				D01ECE1D268B16C8004904C7 /* Main.storyboard */,
+				D0105F82268F5816006C40D7 /* Views */,
+				D0105F83268F581D006C40D7 /* Model */,
+				D0105F84268F5820006C40D7 /* Controllers */,
+				D0105F85268F5825006C40D7 /* Storyboards */,
 				D01ECE20268B16C9004904C7 /* Assets.xcassets */,
-				D01ECE22268B16C9004904C7 /* LaunchScreen.storyboard */,
 				D01ECE25268B16C9004904C7 /* Info.plist */,
 			);
 			path = SolarX;
@@ -88,7 +128,6 @@
 				9BC4C8509A7500CF194B7132 /* Pods-SolarX.debug.xcconfig */,
 				570746365509E37E3CB782AD /* Pods-SolarX.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
