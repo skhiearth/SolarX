@@ -14,6 +14,10 @@
 		D01ECE1F268B16C8004904C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01ECE1D268B16C8004904C7 /* Main.storyboard */; };
 		D01ECE21268B16C9004904C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D01ECE20268B16C9004904C7 /* Assets.xcassets */; };
 		D01ECE24268B16C9004904C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01ECE22268B16C9004904C7 /* LaunchScreen.storyboard */; };
+		D0D7F912268F5E7300CECAA4 /* OverviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D7F911268F5E7300CECAA4 /* OverviewVC.swift */; };
+		D0D7F914268F5E7E00CECAA4 /* EnergyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D7F913268F5E7E00CECAA4 /* EnergyVC.swift */; };
+		D0D7F916268F5E8900CECAA4 /* SubsidiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D7F915268F5E8900CECAA4 /* SubsidiesVC.swift */; };
+		D0D7F918268F5E9500CECAA4 /* SavingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D7F917268F5E9500CECAA4 /* SavingsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		D01ECE20268B16C9004904C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D01ECE23268B16C9004904C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D01ECE25268B16C9004904C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0D7F911268F5E7300CECAA4 /* OverviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewVC.swift; sourceTree = "<group>"; };
+		D0D7F913268F5E7E00CECAA4 /* EnergyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyVC.swift; sourceTree = "<group>"; };
+		D0D7F915268F5E8900CECAA4 /* SubsidiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubsidiesVC.swift; sourceTree = "<group>"; };
+		D0D7F917268F5E9500CECAA4 /* SavingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,7 @@
 		D0105F84268F5820006C40D7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D0D7F910268F5E6400CECAA4 /* Main */,
 				D01ECE1B268B16C8004904C7 /* ViewController.swift */,
 				D0105F86268F5840006C40D7 /* Delegates */,
 			);
@@ -112,6 +121,17 @@
 				D01ECE25268B16C9004904C7 /* Info.plist */,
 			);
 			path = SolarX;
+			sourceTree = "<group>";
+		};
+		D0D7F910268F5E6400CECAA4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D0D7F911268F5E7300CECAA4 /* OverviewVC.swift */,
+				D0D7F913268F5E7E00CECAA4 /* EnergyVC.swift */,
+				D0D7F915268F5E8900CECAA4 /* SubsidiesVC.swift */,
+				D0D7F917268F5E9500CECAA4 /* SavingsVC.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		F12367DCCBB773F23C0BEF0F /* Frameworks */ = {
@@ -248,6 +268,10 @@
 				D01ECE1C268B16C8004904C7 /* ViewController.swift in Sources */,
 				D01ECE18268B16C8004904C7 /* AppDelegate.swift in Sources */,
 				D01ECE1A268B16C8004904C7 /* SceneDelegate.swift in Sources */,
+				D0D7F914268F5E7E00CECAA4 /* EnergyVC.swift in Sources */,
+				D0D7F918268F5E9500CECAA4 /* SavingsVC.swift in Sources */,
+				D0D7F916268F5E8900CECAA4 /* SubsidiesVC.swift in Sources */,
+				D0D7F912268F5E7300CECAA4 /* OverviewVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

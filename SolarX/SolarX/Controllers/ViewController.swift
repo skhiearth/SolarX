@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  SolarX
 //
-//  Created by Utkarsh Sharma on 29/06/21.
+//  Created by Utkarsh Sharma and Simran Gogia on 29/06/21.
 //
 
 import UIKit
