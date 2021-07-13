@@ -11,7 +11,7 @@
         <!--OverviewVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="OverviewVC" customModule="SolarX" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OverviewVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="OverviewVC" customModule="SolarX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,11 +34,17 @@
                                         <rect key="frame" x="175" y="22" width="24" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Leaf"/>
+                                        <connections>
+                                            <action selector="goToSavings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AaJ-t0-Jpc"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3O-ip-sUk">
                                         <rect key="frame" x="273" y="23" width="23" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Vector"/>
+                                        <connections>
+                                            <action selector="goToSubsidies:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dKI-Ld-VDI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -87,6 +93,7 @@
                                         </constraints>
                                         <state key="normal" backgroundImage="Group 88"/>
                                         <connections>
+                                            <action selector="addNewSolarPanel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x4v-dg-147"/>
                                             <segue destination="cRa-rn-Rxx" kind="show" id="WYo-pE-BAK"/>
                                         </connections>
                                     </button>
@@ -112,11 +119,33 @@
                                         <rect key="frame" x="17" y="67" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Group 91"/>
+                                        <connections>
+                                            <action selector="skipToAR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RBB-72-cRl"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXT-hr-XXi">
                                         <rect key="frame" x="110" y="67" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Group 90"/>
+                                        <connections>
+                                            <action selector="skipToMap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E65-6D-EnE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkI-dp-8V9">
+                                        <rect key="frame" x="33" y="217" width="53" height="53"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="Group 110"/>
+                                        <connections>
+                                            <action selector="chatSupport:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X71-k2-A5N"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7g-8l-YVc">
+                                        <rect key="frame" x="104" y="217" width="53" height="53"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="Group 111"/>
+                                        <connections>
+                                            <action selector="callSupport:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p3U-cV-Le7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -150,6 +179,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXe-Lh-OaP">
                                         <rect key="frame" x="0.0" y="0.0" width="166" height="81"/>
                                         <state key="normal" backgroundImage="Preferences"/>
+                                        <connections>
+                                            <action selector="goToPreferences:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U61-ZL-4b6"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -197,10 +229,10 @@
             </objects>
             <point key="canvasLocation" x="-130.43478260869566" y="79.6875"/>
         </scene>
-        <!--View Controller-->
+        <!--Add PanelVC-->
         <scene sceneID="oyq-cN-9X2">
             <objects>
-                <viewController id="cRa-rn-Rxx" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddPanelVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cRa-rn-Rxx" customClass="AddPanelVC" customModule="SolarX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Or2-eF-8e5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -220,18 +252,30 @@
                                             <constraint firstAttribute="height" constant="48" id="bhe-CF-Zmg"/>
                                         </constraints>
                                         <state key="normal" image="Group 107"/>
+                                        <connections>
+                                            <action selector="cancelButtonPressed:" destination="cRa-rn-Rxx" eventType="touchUpInside" id="Rz0-DI-dNZ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4j7-xx-KAJ">
                                         <rect key="frame" x="20" y="184" width="334" height="72"/>
                                         <state key="normal" image="Group 67"/>
+                                        <connections>
+                                            <action selector="augmentedRealityBtnPressed:" destination="cRa-rn-Rxx" eventType="touchUpInside" id="Yd0-V9-Unw"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkj-n6-HRB">
                                         <rect key="frame" x="20" y="280" width="334" height="72"/>
                                         <state key="normal" image="Group 108"/>
+                                        <connections>
+                                            <action selector="mapBtnPressed:" destination="cRa-rn-Rxx" eventType="touchUpInside" id="VdK-8O-OCQ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flg-Is-BPr">
                                         <rect key="frame" x="20" y="376" width="334" height="72"/>
                                         <state key="normal" image="Group 109"/>
+                                        <connections>
+                                            <action selector="manualEntryPressed:" destination="cRa-rn-Rxx" eventType="touchUpInside" id="gPX-ka-OSI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -274,10 +318,10 @@
             </objects>
             <point key="canvasLocation" x="-130.43478260869566" y="753.34821428571422"/>
         </scene>
-        <!--SavingsVC-->
+        <!--SubsidiesVC-->
         <scene sceneID="hQX-yX-C1V">
             <objects>
-                <viewController id="58C-Rh-Sqw" customClass="SavingsVC" customModule="SolarX" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="SubsidiesVC" storyboardIdentifier="SubsidiesVC" id="58C-Rh-Sqw" customClass="SubsidiesVC" customModule="SolarX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="24L-hR-Obc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -295,11 +339,17 @@
                                         <rect key="frame" x="175" y="22" width="24" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Leaf"/>
+                                        <connections>
+                                            <action selector="goToSavings:" destination="58C-Rh-Sqw" eventType="touchUpInside" id="9WQ-ed-evk"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54e-E6-EhB">
                                         <rect key="frame" x="81" y="19" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Compass"/>
+                                        <connections>
+                                            <action selector="goToMain:" destination="58C-Rh-Sqw" eventType="touchUpInside" id="y25-CL-BPM"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTt-Sh-Mi4">
                                         <rect key="frame" x="258" y="21" width="52" height="40"/>
@@ -325,6 +375,9 @@
                                     <segment title="Contractors"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" red="0.16862745100000001" green="0.80000000000000004" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segmentedControlValueChanged:" destination="58C-Rh-Sqw" eventType="valueChanged" id="Noh-gP-Vq8"/>
+                                </connections>
                             </segmentedControl>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Vector-1" translatesAutoresizingMaskIntoConstraints="NO" id="kY9-V1-MXX">
                                 <rect key="frame" x="25" y="71" width="50" height="50"/>
@@ -353,15 +406,18 @@ Verified contractors.</string>
                             <constraint firstItem="zO4-9f-d1z" firstAttribute="top" secondItem="24L-hR-Obc" secondAttribute="top" id="xS9-bD-KDm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="seegmentedControl" destination="rJw-na-UfW" id="GWr-xs-AcP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xWE-If-fyT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1605.7971014492755" y="79.6875"/>
         </scene>
-        <!--SubsidiesVC-->
+        <!--SavingsVC-->
         <scene sceneID="ZUE-0l-VY8">
             <objects>
-                <viewController id="VrM-40-Izb" customClass="SubsidiesVC" customModule="SolarX" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SavingsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VrM-40-Izb" customClass="SavingsVC" customModule="SolarX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Eey-dJ-FQb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -379,11 +435,17 @@ Verified contractors.</string>
                                         <rect key="frame" x="81" y="19" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Compass"/>
+                                        <connections>
+                                            <action selector="goToMain:" destination="VrM-40-Izb" eventType="touchUpInside" id="0ih-VW-Koo"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgY-1Y-omP">
                                         <rect key="frame" x="273" y="23" width="23" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Vector"/>
+                                        <connections>
+                                            <action selector="goToSubsidies:" destination="VrM-40-Izb" eventType="touchUpInside" id="o2N-mW-P7T"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVD-0q-xmx">
                                         <rect key="frame" x="162" y="20" width="50" height="40"/>
@@ -409,6 +471,9 @@ Verified contractors.</string>
                                     <segment title="All Time"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" red="0.16862745098039217" green="0.80000000000000004" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segmentedControlValueChanged:" destination="VrM-40-Izb" eventType="valueChanged" id="Pfq-lR-ikL"/>
+                                </connections>
                             </segmentedControl>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Leaf-1" translatesAutoresizingMaskIntoConstraints="NO" id="R64-If-suH">
                                 <rect key="frame" x="20" y="66" width="60" height="60"/>
@@ -526,6 +591,9 @@ Better for the planet.</string>
                             <constraint firstAttribute="bottom" secondItem="C8E-UJ-B5t" secondAttribute="bottom" id="nI9-9Y-MaQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="segmentedControl" destination="96A-My-dJw" id="Xhb-QU-Dbe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Px1-wo-1PY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -540,6 +608,8 @@ Better for the planet.</string>
         <image name="Group 107" width="292" height="42"/>
         <image name="Group 108" width="292" height="72"/>
         <image name="Group 109" width="292" height="72"/>
+        <image name="Group 110" width="53" height="53"/>
+        <image name="Group 111" width="53" height="53"/>
         <image name="Group 45" width="333" height="129"/>
         <image name="Group 67" width="292" height="72"/>
         <image name="Group 88" width="292" height="72"/>

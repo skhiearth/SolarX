@@ -12,18 +12,46 @@ class OverviewVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func goToSavings(_ sender: Any) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SavingsVC") as! SavingsVC
+        nextViewController.modalPresentationStyle = .fullScreen
+        self.present(nextViewController, animated:false, completion:nil)
     }
-    */
-
+    
+    @IBAction func goToSubsidies(_ sender: Any) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SubsidiesVC") as! SubsidiesVC
+        nextViewController.modalPresentationStyle = .fullScreen
+        self.present(nextViewController, animated:false, completion:nil)
+    }
+    
+    @IBAction func addNewSolarPanel(_ sender: Any) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "AddPanelVC") as! AddPanelVC
+        self.present(nextViewController, animated:true, completion:nil)
+    }
+    
+    @IBAction func skipToAR(_ sender: Any) {
+        
+    }
+    
+    @IBAction func skipToMap(_ sender: Any) {
+        
+    }
+    
+    @IBAction func goToPreferences(_ sender: Any) {
+        
+    }
+    
+    @IBAction func chatSupport(_ sender: Any) {
+        
+    }
+    
+    @IBAction func callSupport(_ sender: Any) {
+        
+    }
 }
