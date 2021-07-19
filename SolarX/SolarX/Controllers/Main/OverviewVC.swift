@@ -7,11 +7,17 @@
 
 import UIKit
 
+var globalCO2Mitigation = 0.0
+var globalCostSaving = 0.0
+var globalInstallation = 0.0
+
+var supremeArea = 0.0
+var percentage = 0.0
+
 class OverviewVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
     }
     

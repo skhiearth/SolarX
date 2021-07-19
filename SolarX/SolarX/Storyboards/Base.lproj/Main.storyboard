@@ -121,6 +121,7 @@
                                         <state key="normal" image="Group 91"/>
                                         <connections>
                                             <action selector="skipToAR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RBB-72-cRl"/>
+                                            <segue destination="12X-Px-zYW" kind="show" id="GKM-ZP-F06"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXT-hr-XXi">
@@ -261,6 +262,7 @@
                                         <state key="normal" image="Group 67"/>
                                         <connections>
                                             <action selector="augmentedRealityBtnPressed:" destination="cRa-rn-Rxx" eventType="touchUpInside" id="Yd0-V9-Unw"/>
+                                            <segue destination="12X-Px-zYW" kind="show" id="eRE-mL-8Vu"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkj-n6-HRB">
@@ -317,6 +319,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W7x-96-ggm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-130.43478260869566" y="753.34821428571422"/>
+        </scene>
+        <!--Adder View View Controller-->
+        <scene sceneID="ofp-jr-7B5">
+            <objects>
+                <viewController id="12X-Px-zYW" customClass="ARAdderViewViewController" customModule="SolarX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PDI-wS-4WB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qdm-fP-6ak" customClass="ARSCNView">
+                                <rect key="frame" x="0.0" y="71" width="414" height="646"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGh-9I-AIs">
+                                <rect key="frame" x="184" y="757" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vlK-H1-Ai8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dY4-86-Dba"/>
+                    <connections>
+                        <outlet property="captureButton" destination="WGh-9I-AIs" id="ulm-sM-UH3"/>
+                        <outlet property="sceneView" destination="qdm-fP-6ak" id="BR3-gD-UV1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xAH-Oe-PGO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="740.57971014492762" y="752.67857142857144"/>
         </scene>
         <!--SubsidiesVC-->
         <scene sceneID="hQX-yX-C1V">
@@ -691,6 +725,9 @@ Better for the planet.</string>
             <point key="canvasLocation" x="742.02898550724649" y="79.6875"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="GKM-ZP-F06"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="CaretRightGreen" width="17" height="19"/>
         <image name="Compass" width="30" height="30"/>

@@ -14,12 +14,19 @@
 		D01ECE1F268B16C8004904C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01ECE1D268B16C8004904C7 /* Main.storyboard */; };
 		D01ECE21268B16C9004904C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D01ECE20268B16C9004904C7 /* Assets.xcassets */; };
 		D01ECE24268B16C9004904C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01ECE22268B16C9004904C7 /* LaunchScreen.storyboard */; };
+		D06BC11026A5D33F00F89602 /* AddPanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06BC10F26A5D33F00F89602 /* AddPanelVC.swift */; };
+		D06BC11426A5D3A200F89602 /* MonthySavings.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D06BC11126A5D3A200F89602 /* MonthySavings.mlmodel */; };
+		D06BC11526A5D3A200F89602 /* LifetimeCO2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D06BC11226A5D3A200F89602 /* LifetimeCO2.mlmodel */; };
+		D06BC11626A5D3A200F89602 /* InstallationCost.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D06BC11326A5D3A200F89602 /* InstallationCost.mlmodel */; };
 		D08E211226A2CEB600855BAB /* SubsidiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08E211126A2CEB600855BAB /* SubsidiesCell.swift */; };
 		D08E211426A2F29B00855BAB /* subsidies.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08E211326A2F29B00855BAB /* subsidies.swift */; };
 		D0D7F912268F5E7300CECAA4 /* OverviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D7F911268F5E7300CECAA4 /* OverviewVC.swift */; };
 		D0D7F916268F5E8900CECAA4 /* SubsidiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D7F915268F5E8900CECAA4 /* SubsidiesVC.swift */; };
 		D0D7F918268F5E9500CECAA4 /* SavingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D7F917268F5E9500CECAA4 /* SavingsVC.swift */; };
-		D0E00211269DD07600FD7899 /* AddPanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E00210269DD07600FD7899 /* AddPanelVC.swift */; };
+		D0F4E05526A431ED00610151 /* ARAdderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F4E05426A431ED00610151 /* ARAdderViewController.swift */; };
+		D0F4E05726A432DB00610151 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F4E05626A432DB00610151 /* Grid.swift */; };
+		D0F4E05926A432F600610151 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F4E05826A432F600610151 /* UIViewExtension.swift */; };
+		D0F4E05B26A4345000610151 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F4E05A26A4345000610151 /* DoubleExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,12 +41,19 @@
 		D01ECE20268B16C9004904C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D01ECE23268B16C9004904C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D01ECE25268B16C9004904C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D06BC10F26A5D33F00F89602 /* AddPanelVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPanelVC.swift; sourceTree = "<group>"; };
+		D06BC11126A5D3A200F89602 /* MonthySavings.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = MonthySavings.mlmodel; path = "../../../CreateML Models/Models/MonthySavings.mlmodel"; sourceTree = "<group>"; };
+		D06BC11226A5D3A200F89602 /* LifetimeCO2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = LifetimeCO2.mlmodel; path = "../../../CreateML Models/Models/LifetimeCO2.mlmodel"; sourceTree = "<group>"; };
+		D06BC11326A5D3A200F89602 /* InstallationCost.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = InstallationCost.mlmodel; path = "../../../CreateML Models/Models/InstallationCost.mlmodel"; sourceTree = "<group>"; };
 		D08E211126A2CEB600855BAB /* SubsidiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubsidiesCell.swift; sourceTree = "<group>"; };
 		D08E211326A2F29B00855BAB /* subsidies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = subsidies.swift; sourceTree = "<group>"; };
 		D0D7F911268F5E7300CECAA4 /* OverviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewVC.swift; sourceTree = "<group>"; };
 		D0D7F915268F5E8900CECAA4 /* SubsidiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubsidiesVC.swift; sourceTree = "<group>"; };
 		D0D7F917268F5E9500CECAA4 /* SavingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsVC.swift; sourceTree = "<group>"; };
-		D0E00210269DD07600FD7899 /* AddPanelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPanelVC.swift; sourceTree = "<group>"; };
+		D0F4E05426A431ED00610151 /* ARAdderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARAdderViewController.swift; sourceTree = "<group>"; };
+		D0F4E05626A432DB00610151 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		D0F4E05826A432F600610151 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		D0F4E05A26A4345000610151 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,8 @@
 			isa = PBXGroup;
 			children = (
 				D08E211126A2CEB600855BAB /* SubsidiesCell.swift */,
+				D0F4E05626A432DB00610151 /* Grid.swift */,
+				D0F4E05826A432F600610151 /* UIViewExtension.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -65,7 +81,11 @@
 		D0105F83268F581D006C40D7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D06BC11326A5D3A200F89602 /* InstallationCost.mlmodel */,
+				D06BC11226A5D3A200F89602 /* LifetimeCO2.mlmodel */,
+				D06BC11126A5D3A200F89602 /* MonthySavings.mlmodel */,
 				D08E211326A2F29B00855BAB /* subsidies.swift */,
+				D0F4E05A26A4345000610151 /* DoubleExtension.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -135,7 +155,8 @@
 				D0D7F911268F5E7300CECAA4 /* OverviewVC.swift */,
 				D0D7F915268F5E8900CECAA4 /* SubsidiesVC.swift */,
 				D0D7F917268F5E9500CECAA4 /* SavingsVC.swift */,
-				D0E00210269DD07600FD7899 /* AddPanelVC.swift */,
+				D06BC10F26A5D33F00F89602 /* AddPanelVC.swift */,
+				D0F4E05426A431ED00610151 /* ARAdderViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -271,15 +292,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F4E05926A432F600610151 /* UIViewExtension.swift in Sources */,
 				D01ECE1C268B16C8004904C7 /* ViewController.swift in Sources */,
 				D08E211226A2CEB600855BAB /* SubsidiesCell.swift in Sources */,
 				D08E211426A2F29B00855BAB /* subsidies.swift in Sources */,
+				D0F4E05726A432DB00610151 /* Grid.swift in Sources */,
+				D0F4E05B26A4345000610151 /* DoubleExtension.swift in Sources */,
 				D01ECE18268B16C8004904C7 /* AppDelegate.swift in Sources */,
 				D01ECE1A268B16C8004904C7 /* SceneDelegate.swift in Sources */,
-				D0E00211269DD07600FD7899 /* AddPanelVC.swift in Sources */,
+				D0F4E05526A431ED00610151 /* ARAdderViewController.swift in Sources */,
+				D06BC11526A5D3A200F89602 /* LifetimeCO2.mlmodel in Sources */,
+				D06BC11026A5D33F00F89602 /* AddPanelVC.swift in Sources */,
+				D06BC11626A5D3A200F89602 /* InstallationCost.mlmodel in Sources */,
 				D0D7F918268F5E9500CECAA4 /* SavingsVC.swift in Sources */,
 				D0D7F916268F5E8900CECAA4 /* SubsidiesVC.swift in Sources */,
 				D0D7F912268F5E7300CECAA4 /* OverviewVC.swift in Sources */,
+				D06BC11426A5D3A200F89602 /* MonthySavings.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

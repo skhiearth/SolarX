@@ -13,7 +13,7 @@ class SavingsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
     @IBAction func segmentedControlValueChanged(_ sender: Any) {
