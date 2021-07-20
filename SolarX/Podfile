@@ -27,5 +27,7 @@ target 'SolarX' do
   pod 'Kingfisher'
   pod 'Firebase/Firestore'
   pod 'JSQMessagesViewController'
+  pod "SAConfettiView"
+
 
 end

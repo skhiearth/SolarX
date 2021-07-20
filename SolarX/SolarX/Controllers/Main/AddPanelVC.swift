@@ -11,6 +11,7 @@ import ARKit
 import CDAlertView
 import SVProgressHUD
 import CoreML
+import SAConfettiView
 
 class AddPanelVC: UIViewController {
 
@@ -112,8 +113,15 @@ class AddPanelVC: UIViewController {
                         globalCostSaving = globalCostSaving + monthlySavings.rounded(toPlaces: 2)
                     }
                     
-                    self.showSimpleActionSheet(controller: self, localCost: localCost)
+                    let confettiView = SAConfettiView(frame: self.view.bounds)
+                    self.view.addSubview(confettiView)
+
+                    confettiView.startConfetti()
                     
+                    let alert = CDAlertView(title: "Yay!", message: "Welcome to the green revolution with SolarX.", type: .success)
+                    alert.show()
+                    
+                    self.showSimpleActionSheet(controller: self, localCost: localCost)
                 }
                 
             }

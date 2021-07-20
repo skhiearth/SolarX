@@ -380,6 +380,7 @@ PODS:
   - RSKGrowingTextView (6.0.4):
     - RSKPlaceholderTextView (= 6.0.4)
   - RSKPlaceholderTextView (6.0.4)
+  - SAConfettiView (0.1.8)
   - SKCountryPicker (1.3.2)
   - SkyFloatingLabelTextField (3.8.0)
   - SVProgressHUD (2.2.5)
@@ -403,6 +404,7 @@ DEPENDENCIES:
   - NVActivityIndicatorView
   - RevealingSplashView
   - RSKGrowingTextView
+  - SAConfettiView
   - SKCountryPicker
   - SkyFloatingLabelTextField (~> 3.0)
   - SVProgressHUD
@@ -445,6 +447,7 @@ SPEC REPOS:
     - RevealingSplashView
     - RSKGrowingTextView
     - RSKPlaceholderTextView
+    - SAConfettiView
     - SKCountryPicker
     - SkyFloatingLabelTextField
     - SVProgressHUD
@@ -495,6 +498,7 @@ SPEC CHECKSUMS:
   RevealingSplashView: 40c5a770894459736acdc95655eeba0dd30ce91c
   RSKGrowingTextView: 47dc83f5715793388a5255328eeede0f2b9f1bd9
   RSKPlaceholderTextView: 245c20e06d14df883809b7d9ca71bd7784c92531
+  SAConfettiView: c87031a2280659261b730fce3669fb10e73636ee
   SKCountryPicker: ceff8cfffc0ddde2088f2fcc2d01d1ad530c0b03
   SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
@@ -502,6 +506,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   TweeTextField: 47bf8e7f0433364a7f7e119c45e7f278ea50eb62
 
-PODFILE CHECKSUM: cc44e6074c4c76d7303c83496563bcd34a3a6a35
+PODFILE CHECKSUM: 71c6064137c2e1af6aa0cc14e6a1ee579bf63833
 
 COCOAPODS: 1.10.1
