@@ -14,6 +14,9 @@ var globalInstallation = 0.0
 var supremeArea = 0.0
 var percentage = 0.0
 
+var subsidyNumber = 0
+var contractorId = 0
+
 class OverviewVC: UIViewController {
 
     override func viewDidLoad() {

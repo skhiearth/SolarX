@@ -114,12 +114,6 @@ class AddPanelVC: UIViewController {
                     
                     self.showSimpleActionSheet(controller: self, localCost: localCost)
                     
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 4.0, execute: {
-                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "OverviewVC") as! OverviewVC
-                        nextViewController.modalPresentationStyle = .fullScreen
-                        self.present(nextViewController, animated:true, completion:nil)
-                    })
                 }
                 
             }
@@ -145,21 +139,28 @@ class AddPanelVC: UIViewController {
     
     
     func showSimpleActionSheet(controller: UIViewController, localCost: Int) {
-            let alert = UIAlertController(title: "Yay!", message: "Welcome to the green revolution with SolarX. Your estimated instalation cost is \(localCost). You can save an average of Rs. 16000 with the recommended subsidy - AJAY.", preferredStyle: .actionSheet)
-            alert.addAction(UIAlertAction(title: "AJAY Scheme", style: .default, handler: { (_) in
-                print("User click Approve button")
+            let alert = UIAlertController(title: "Yay!", message: "Welcome to the green revolution with SolarX. Your estimated instalation cost is \(localCost). You can save an average of Rs. 16000 with the recommended subsidy - GBI.", preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "GBI Scheme", style: .default, handler: { (_) in
+                subsidyNumber = 0
+                if let url = URL(string: "https://www.tatapower-ddl.com/solar-rooftop/register"),
+                    UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url, options: [:])
+                }
             }))
 
             alert.addAction(UIAlertAction(title: "Explore more subsidies", style: .default, handler: { (_) in
-                print("User click Edit button")
+                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SubsidiesVC") as! SubsidiesVC
+                nextViewController.modalPresentationStyle = .fullScreen
+                self.present(nextViewController, animated:true, completion:nil)
             }))
 
             alert.addAction(UIAlertAction(title: "Proceed without subsidy", style: .destructive, handler: { (_) in
-                print("User click Delete button")
+                
             }))
 
             alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: { (_) in
-                print("User click Dismiss button")
+                
             }))
 
             self.present(alert, animated: true, completion: {

@@ -17,7 +17,16 @@ class SavingsVC: UIViewController {
     }
     
     @IBAction func segmentedControlValueChanged(_ sender: Any) {
-        
+        switch segmentedControl.selectedSegmentIndex {
+            case 0:
+                print("Week")
+            case 1:
+                print("Month")
+            case 2:
+                print("All Time")
+            default:
+                break;
+        }
     }
     
     @IBAction func goToMain(_ sender: Any) {

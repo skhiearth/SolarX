@@ -328,6 +328,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lma-Jx-oIR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qdm-fP-6ak" customClass="ARSCNView">
                                 <rect key="frame" x="0.0" y="71" width="414" height="646"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -341,6 +345,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vlK-H1-Ai8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lma-Jx-oIR" firstAttribute="leading" secondItem="vlK-H1-Ai8" secondAttribute="leading" id="2sc-LK-fVe"/>
+                            <constraint firstAttribute="bottom" secondItem="lma-Jx-oIR" secondAttribute="bottom" id="Ojs-7B-c0t"/>
+                            <constraint firstItem="lma-Jx-oIR" firstAttribute="top" secondItem="vlK-H1-Ai8" secondAttribute="top" id="YIE-l3-5G0"/>
+                            <constraint firstItem="lma-Jx-oIR" firstAttribute="trailing" secondItem="vlK-H1-Ai8" secondAttribute="trailing" id="gwR-wQ-AKZ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dY4-86-Dba"/>
                     <connections>
@@ -726,7 +736,7 @@ Better for the planet.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="GKM-ZP-F06"/>
+        <segue reference="eRE-mL-8Vu"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="CaretRightGreen" width="17" height="19"/>
