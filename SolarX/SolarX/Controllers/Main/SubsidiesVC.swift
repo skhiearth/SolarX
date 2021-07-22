@@ -13,8 +13,7 @@ class SubsidiesVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     @IBOutlet weak var tableView: UITableView!
     
-    var selectionType = "Subsidiess"
-    var arrayToSelect = subsidies
+    var selectionType = "Subsidies"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +25,10 @@ class SubsidiesVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         switch seegmentedControl.selectedSegmentIndex {
             case 0:
                 selectionType = "Subsidies"
+                tableView.reloadData()
             case 1:
                 selectionType = "Products"
+                tableView.reloadData()
             case 2:
                 selectionType = "Contractors"
             default:
@@ -38,16 +39,12 @@ class SubsidiesVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch selectionType {
         case "Subsidies":
-            arrayToSelect = subsidies
             return subsidies.count
         case "Products":
-            arrayToSelect = products
             return products.count
         case "Contractors":
-            arrayToSelect = contractors
             return contractors.count
         default:
-            arrayToSelect = contractors
             return subsidies.count
         }
         
@@ -57,30 +54,49 @@ class SubsidiesVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         let cell = tableView.dequeueReusableCell(withIdentifier: "SubsidiesCell", for: indexPath) as? SubsidiesCell
         
         cell?.selectionStyle = .none
-
-        cell?.titleLb.text = arrayToSelect[indexPath.row]!["Name"]
-        cell?.statusLbl.text = arrayToSelect[indexPath.row]!["Status"]
-        cell?.displayImage.image = UIImage(named:arrayToSelect[indexPath.row]!["Image"]!)
-        
-        if(subsidies[indexPath.row]!["Status"] == "Already Granted"){
-            cell?.arrowImage.image = UIImage(named:"CaretRight")
-        } else {
-            cell?.arrowImage.image = UIImage(named:"CaretRightGreen")
+        if(selectionType == "Subsidies"){
+            cell?.titleLb.text = subsidies[indexPath.row]!["Name"]
+            cell?.statusLbl.text = subsidies[indexPath.row]!["Status"]
+            cell?.displayImage.image = UIImage(named: subsidies[indexPath.row]!["Image"]!)
+            
+            if(subsidies[indexPath.row]!["Status"] == "Already Granted"){
+                cell?.arrowImage.image = UIImage(named:"CaretRight")
+            } else {
+                cell?.arrowImage.image = UIImage(named:"CaretRightGreen")
+            }
+        } else if(selectionType == "Products"){
+            cell?.titleLb.text = products[indexPath.row]!["Name"]
+            cell?.statusLbl.text = products[indexPath.row]!["Status"]
+            cell?.displayImage.image = UIImage(named: products[indexPath.row]!["Image"]!)
+            
+            if(products[indexPath.row]!["Status"] == "Already Granted"){
+                cell?.arrowImage.image = UIImage(named:"CaretRight")
+            } else {
+                cell?.arrowImage.image = UIImage(named:"CaretRightGreen")
+            }
         }
         
         return cell!
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        if(arrayToSelect[indexPath.row]!["Status"] == "Already Granted"){
-            // Already granted
-        } else {
-            self.showSimpleActionSheet(controller: self, number: indexPath.row,
-                                       name: arrayToSelect[indexPath.row]!["Name"]!, description: arrayToSelect[indexPath.row]!["Description"]!,
-                                       url: arrayToSelect[indexPath.row]!["URL"]!)
+        if(selectionType == "Subsidies"){
+            if(subsidies[indexPath.row]!["Status"] == "Already Granted"){
+                // Already granted
+            } else {
+                self.showSimpleActionSheet(controller: self, number: indexPath.row,
+                                           name: subsidies[indexPath.row]!["Name"]!, description: subsidies[indexPath.row]!["Description"]!,
+                                           url: subsidies[indexPath.row]!["URL"]!)
+            }
+        } else if (selectionType == "Products"){
+            if(products[indexPath.row]!["Status"] == "Already Granted"){
+                // Already granted
+            } else {
+                self.showSimpleActionSheet(controller: self, number: indexPath.row,
+                                           name: products[indexPath.row]!["Name"]!, description: products[indexPath.row]!["Description"]!,
+                                           url: products[indexPath.row]!["URL"]!)
+            }
         }
-        
     }
     
     @IBAction func goToMain(_ sender: Any) {

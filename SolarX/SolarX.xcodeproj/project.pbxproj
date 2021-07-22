@@ -14,6 +14,7 @@
 		D01ECE1F268B16C8004904C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01ECE1D268B16C8004904C7 /* Main.storyboard */; };
 		D01ECE21268B16C9004904C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D01ECE20268B16C9004904C7 /* Assets.xcassets */; };
 		D01ECE24268B16C9004904C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01ECE22268B16C9004904C7 /* LaunchScreen.storyboard */; };
+		D05DD54B26A9623100499000 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05DD54A26A9623100499000 /* Onboarding.swift */; };
 		D06BC11026A5D33F00F89602 /* AddPanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06BC10F26A5D33F00F89602 /* AddPanelVC.swift */; };
 		D06BC11426A5D3A200F89602 /* MonthySavings.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D06BC11126A5D3A200F89602 /* MonthySavings.mlmodel */; };
 		D06BC11526A5D3A200F89602 /* LifetimeCO2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D06BC11226A5D3A200F89602 /* LifetimeCO2.mlmodel */; };
@@ -41,6 +42,7 @@
 		D01ECE20268B16C9004904C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D01ECE23268B16C9004904C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D01ECE25268B16C9004904C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D05DD54A26A9623100499000 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		D06BC10F26A5D33F00F89602 /* AddPanelVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPanelVC.swift; sourceTree = "<group>"; };
 		D06BC11126A5D3A200F89602 /* MonthySavings.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = MonthySavings.mlmodel; path = "../../../CreateML Models/Models/MonthySavings.mlmodel"; sourceTree = "<group>"; };
 		D06BC11226A5D3A200F89602 /* LifetimeCO2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = LifetimeCO2.mlmodel; path = "../../../CreateML Models/Models/LifetimeCO2.mlmodel"; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			children = (
 				D0D7F910268F5E6400CECAA4 /* Main */,
 				D01ECE1B268B16C8004904C7 /* ViewController.swift */,
+				D05DD54A26A9623100499000 /* Onboarding.swift */,
 				D0105F86268F5840006C40D7 /* Delegates */,
 			);
 			path = Controllers;
@@ -297,6 +300,7 @@
 				D08E211226A2CEB600855BAB /* SubsidiesCell.swift in Sources */,
 				D08E211426A2F29B00855BAB /* subsidies.swift in Sources */,
 				D0F4E05726A432DB00610151 /* Grid.swift in Sources */,
+				D05DD54B26A9623100499000 /* Onboarding.swift in Sources */,
 				D0F4E05B26A4345000610151 /* DoubleExtension.swift in Sources */,
 				D01ECE18268B16C8004904C7 /* AppDelegate.swift in Sources */,
 				D01ECE1A268B16C8004904C7 /* SceneDelegate.swift in Sources */,
