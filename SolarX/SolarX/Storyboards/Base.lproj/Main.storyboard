@@ -330,6 +330,17 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 104" translatesAutoresizingMaskIntoConstraints="NO" id="Vob-yf-e1r">
                                         <rect key="frame" x="0.0" y="0.0" width="166" height="220"/>
                                     </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="solarpanel 1" translatesAutoresizingMaskIntoConstraints="NO" id="pyz-J9-Cqh">
+                                        <rect key="frame" x="-45" y="81" width="211" height="139"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loom Solar Panel - Shark 440" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8h-G0-2iG">
+                                        <rect key="frame" x="15" y="60" width="132" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                        <color key="textColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -411,7 +422,7 @@
                                 <rect key="frame" x="20" y="208" width="374" height="600"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 106" translatesAutoresizingMaskIntoConstraints="NO" id="jEl-wI-H6t">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="600"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="588"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WES-bt-Sp3">
                                         <rect key="frame" x="20" y="522" width="334" height="48"/>
@@ -436,6 +447,7 @@
                                         <state key="normal" image="Group 108"/>
                                         <connections>
                                             <action selector="mapBtnPressed:" destination="cRa-rn-Rxx" eventType="touchUpInside" id="VdK-8O-OCQ"/>
+                                            <segue destination="Vip-nP-9iE" kind="show" id="6Tb-At-Dr0"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flg-Is-BPr">
@@ -461,6 +473,7 @@
                                     <constraint firstAttribute="trailing" secondItem="WES-bt-Sp3" secondAttribute="trailing" constant="20" id="Wb9-8x-bM6"/>
                                     <constraint firstItem="4j7-xx-KAJ" firstAttribute="leading" secondItem="WLb-wz-JeS" secondAttribute="leading" constant="20" id="WsD-LO-YmH"/>
                                     <constraint firstItem="rkj-n6-HRB" firstAttribute="leading" secondItem="WLb-wz-JeS" secondAttribute="leading" constant="20" symbolic="YES" id="Zqs-Ul-Wu4"/>
+                                    <constraint firstAttribute="bottom" secondItem="jEl-wI-H6t" secondAttribute="bottom" constant="12" id="aHO-14-EDj"/>
                                     <constraint firstAttribute="bottom" secondItem="WES-bt-Sp3" secondAttribute="bottom" constant="30" id="bgV-JL-ICz"/>
                                     <constraint firstAttribute="trailing" secondItem="4j7-xx-KAJ" secondAttribute="trailing" constant="20" id="coV-RN-S9y"/>
                                     <constraint firstAttribute="height" constant="600" id="uxG-1j-khe"/>
@@ -486,36 +499,57 @@
             </objects>
             <point key="canvasLocation" x="-130.43478260869566" y="753.34821428571422"/>
         </scene>
-        <!--Adder View View Controller-->
+        <!--Adder View Controller-->
         <scene sceneID="ofp-jr-7B5">
             <objects>
-                <viewController id="12X-Px-zYW" customClass="ARAdderViewViewController" customModule="SolarX" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="12X-Px-zYW" customClass="ARAdderViewController" customModule="SolarX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PDI-wS-4WB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lma-Jx-oIR">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGh-9I-AIs">
+                                        <rect key="frame" x="167" y="736" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="7iE-aQ-UHO"/>
+                                            <constraint firstAttribute="height" constant="80" id="ZK0-ch-rI5"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="cameraCapture"/>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 9" translatesAutoresizingMaskIntoConstraints="NO" id="Ced-T3-Frd">
+                                        <rect key="frame" x="177.5" y="0.0" width="59" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="EdD-4w-Fnn"/>
+                                            <constraint firstAttribute="width" constant="59" id="GdP-9m-8y3"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Ced-T3-Frd" firstAttribute="centerX" secondItem="lma-Jx-oIR" secondAttribute="centerX" id="Dx6-7V-DIO"/>
+                                    <constraint firstAttribute="bottom" secondItem="WGh-9I-AIs" secondAttribute="bottom" constant="26" id="SYE-b0-Nlo"/>
+                                    <constraint firstItem="Ced-T3-Frd" firstAttribute="top" secondItem="lma-Jx-oIR" secondAttribute="top" id="W3c-DI-KDw"/>
+                                    <constraint firstItem="WGh-9I-AIs" firstAttribute="centerX" secondItem="lma-Jx-oIR" secondAttribute="centerX" id="sew-Sj-D4B"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qdm-fP-6ak" customClass="ARSCNView">
-                                <rect key="frame" x="0.0" y="71" width="414" height="646"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdm-fP-6ak" customClass="ARSCNView">
+                                <rect key="frame" x="0.0" y="74" width="414" height="608"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGh-9I-AIs">
-                                <rect key="frame" x="184" y="757" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vlK-H1-Ai8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="lma-Jx-oIR" firstAttribute="leading" secondItem="vlK-H1-Ai8" secondAttribute="leading" id="2sc-LK-fVe"/>
+                            <constraint firstItem="qdm-fP-6ak" firstAttribute="top" secondItem="vlK-H1-Ai8" secondAttribute="top" constant="74" id="Gb7-PC-OuA"/>
+                            <constraint firstItem="vlK-H1-Ai8" firstAttribute="bottom" secondItem="qdm-fP-6ak" secondAttribute="bottom" constant="126" id="LMw-cb-OXT"/>
                             <constraint firstAttribute="bottom" secondItem="lma-Jx-oIR" secondAttribute="bottom" id="Ojs-7B-c0t"/>
                             <constraint firstItem="lma-Jx-oIR" firstAttribute="top" secondItem="vlK-H1-Ai8" secondAttribute="top" id="YIE-l3-5G0"/>
                             <constraint firstItem="lma-Jx-oIR" firstAttribute="trailing" secondItem="vlK-H1-Ai8" secondAttribute="trailing" id="gwR-wQ-AKZ"/>
+                            <constraint firstItem="qdm-fP-6ak" firstAttribute="leading" secondItem="vlK-H1-Ai8" secondAttribute="leading" id="ouw-AA-eob"/>
+                            <constraint firstItem="qdm-fP-6ak" firstAttribute="trailing" secondItem="vlK-H1-Ai8" secondAttribute="trailing" id="trF-af-TSq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dY4-86-Dba"/>
@@ -526,7 +560,87 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xAH-Oe-PGO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="740.57971014492762" y="752.67857142857144"/>
+            <point key="canvasLocation" x="740.57971014492762" y="752.44565217391312"/>
+        </scene>
+        <!--Map View-->
+        <scene sceneID="vav-Lw-2Ga">
+            <objects>
+                <viewController id="Vip-nP-9iE" customClass="MapView" customModule="SolarX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="npI-PS-h2w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ugl-bf-fSL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 9" translatesAutoresizingMaskIntoConstraints="NO" id="uOK-50-mh7">
+                                        <rect key="frame" x="177.5" y="0.0" width="59" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="34n-2F-0Fi"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="59" id="C1i-Fd-itl"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="56" id="fC3-5V-Ocx"/>
+                                            <constraint firstAttribute="width" constant="59" id="zZR-5n-cdD"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ej6-w2-qVC">
+                                        <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktZ-ix-FKP">
+                                        <rect key="frame" x="0.0" y="42" width="414" height="112"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="112" id="LQj-x4-fzf"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTW-ch-9lI">
+                                        <rect key="frame" x="307" y="48" width="79" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="3nE-jP-6GZ"/>
+                                            <constraint firstAttribute="width" constant="79" id="kph-QL-PNL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <state key="normal" title="Calculate">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="calculateBtnPressed:" destination="Vip-nP-9iE" eventType="touchUpInside" id="PbE-yR-7bB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="KTW-ch-9lI" firstAttribute="top" secondItem="ugl-bf-fSL" secondAttribute="top" constant="48" id="HGs-fi-fDn"/>
+                                    <constraint firstItem="uOK-50-mh7" firstAttribute="centerX" secondItem="ugl-bf-fSL" secondAttribute="centerX" id="Hh3-f6-dpS"/>
+                                    <constraint firstItem="ej6-w2-qVC" firstAttribute="top" secondItem="uOK-50-mh7" secondAttribute="bottom" id="IsY-i1-CMk"/>
+                                    <constraint firstAttribute="trailing" secondItem="ej6-w2-qVC" secondAttribute="trailing" id="Jc2-0c-kkr"/>
+                                    <constraint firstAttribute="trailing" secondItem="KTW-ch-9lI" secondAttribute="trailing" constant="28" id="P1h-kR-73G"/>
+                                    <constraint firstAttribute="bottom" secondItem="ej6-w2-qVC" secondAttribute="bottom" id="Xad-tD-idh"/>
+                                    <constraint firstAttribute="trailing" secondItem="ktZ-ix-FKP" secondAttribute="trailing" id="fMP-VA-OLl"/>
+                                    <constraint firstItem="ktZ-ix-FKP" firstAttribute="top" secondItem="KTW-ch-9lI" secondAttribute="bottom" constant="-40" id="fpy-Xc-fHQ"/>
+                                    <constraint firstItem="uOK-50-mh7" firstAttribute="top" secondItem="ugl-bf-fSL" secondAttribute="top" id="h59-57-gjF"/>
+                                    <constraint firstItem="ej6-w2-qVC" firstAttribute="leading" secondItem="ugl-bf-fSL" secondAttribute="leading" id="nqV-Fw-GZp"/>
+                                    <constraint firstItem="ktZ-ix-FKP" firstAttribute="leading" secondItem="ugl-bf-fSL" secondAttribute="leading" id="wly-ic-sbr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uJw-ow-9uJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ugl-bf-fSL" firstAttribute="leading" secondItem="uJw-ow-9uJ" secondAttribute="leading" id="APN-Dj-sOG"/>
+                            <constraint firstItem="ugl-bf-fSL" firstAttribute="trailing" secondItem="uJw-ow-9uJ" secondAttribute="trailing" id="M6y-sd-Gqf"/>
+                            <constraint firstAttribute="bottom" secondItem="ugl-bf-fSL" secondAttribute="bottom" id="RpE-eg-0Nj"/>
+                            <constraint firstItem="ugl-bf-fSL" firstAttribute="top" secondItem="uJw-ow-9uJ" secondAttribute="top" id="fVr-if-dZ1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6m5-fF-5oL"/>
+                    <connections>
+                        <outlet property="webContainerView" destination="ej6-w2-qVC" id="sxT-on-rBd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="213-m5-eBC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1605.7971014492755" y="752.67857142857144"/>
         </scene>
         <!--SubsidiesVC-->
         <scene sceneID="hQX-yX-C1V">
@@ -804,6 +918,13 @@ Better for the planet.</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Three" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tb3-Ab-WG2">
+                                        <rect key="frame" x="8" y="40" width="159" height="79"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="66"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -822,6 +943,13 @@ Better for the planet.</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="114kg" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZc-gp-wYb">
+                                        <rect key="frame" x="8" y="20" width="113" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="46"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -833,10 +961,17 @@ Better for the planet.</string>
                                         <rect key="frame" x="0.0" y="0.0" width="235" height="158"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="of cash saved this month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njY-c8-WMx">
-                                        <rect key="frame" x="8" y="128" width="141" height="16"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="of cash saved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njY-c8-WMx">
+                                        <rect key="frame" x="8" y="128" width="78" height="16"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="₹380" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvP-pU-135">
+                                        <rect key="frame" x="8" y="40" width="157" height="79"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="66"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -858,6 +993,13 @@ Better for the planet.</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 subsidies panel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCI-Rn-E2J">
+                                        <rect key="frame" x="21" y="64" width="117" height="18"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -873,6 +1015,13 @@ Better for the planet.</string>
                                         <rect key="frame" x="8" y="8" width="115" height="53"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="₹110" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbJ-1c-ewo">
+                                        <rect key="frame" x="8" y="84" width="96" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="46"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -902,7 +1051,7 @@ Better for the planet.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="GKM-ZP-F06"/>
+        <segue reference="eRE-mL-8Vu"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="CamRed" width="141" height="60"/>
@@ -932,15 +1081,18 @@ Better for the planet.</string>
         <image name="Rectangle 535" width="198" height="158"/>
         <image name="Rectangle 536" width="333" height="96"/>
         <image name="Rectangle 585" width="333" height="68"/>
+        <image name="Rectangle 9" width="56" height="5"/>
         <image name="SavingsLbl" width="50" height="40"/>
         <image name="Subsidies" width="375" height="812"/>
         <image name="SubsidiesLbl" width="52" height="40"/>
         <image name="Vector" width="22.5" height="22"/>
         <image name="Vector-1" width="46" height="50"/>
+        <image name="cameraCapture" width="280" height="280"/>
         <image name="image 6" width="333" height="127"/>
         <image name="overviewLbl" width="50" height="39"/>
         <image name="savingsBg" width="375" height="812"/>
         <image name="solar3 1" width="120" height="36"/>
+        <image name="solarpanel 1" width="139" height="99"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

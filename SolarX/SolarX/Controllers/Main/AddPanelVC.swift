@@ -85,17 +85,17 @@ class AddPanelVC: UIViewController {
                         print(supremeArea)
                         
                         // Installation Cost Model Prediction
-                        guard let costModelOutput = try? costModel.prediction(Total_Roof_Top_Area__in_Sq__m__: supremeArea) else {
+                        guard let costModelOutput = try? costModel.prediction(Roof_Area: supremeArea) else {
                             fatalError("Unexpected runtime error.")
                         }
                         
                         let cost = costModelOutput.Installation_Cost
                         
                         globalInstallation = globalInstallation + cost.rounded(toPlaces: 2)
-                        localCost = Int(cost.rounded(toPlaces: 2))
+                        print(cost)
                         
                         // Lifetime CO2 Mitigation Model Prediction
-                        guard let co2ModelPred = try? co2Model.prediction(Total_Roof_Top_Area__in_Sq__m__: supremeArea, Average_Solar_Irridation__W_sq_m_: irridation) else {
+                        guard let co2ModelPred = try? co2Model.prediction(Roof_Area: supremeArea, Average_Solar_Irridation__W_sq_m_: irridation) else {
                             fatalError("Unexpected runtime error.")
                         }
                         
@@ -104,24 +104,32 @@ class AddPanelVC: UIViewController {
                         globalCO2Mitigation = globalCO2Mitigation + co2Mitigation.rounded(toPlaces: 2)
                         
                         // Monthly Savings Model Prediction
-                        guard let monthlySavingsPrediction = try? monthlySavingsModel.prediction(Total_Roof_Top_Area__in_Sq__m__: supremeArea, Average_Solar_Irridation__W_sq_m_: irridation) else {
+                        guard let monthlySavingsPrediction = try? monthlySavingsModel.prediction(Roof_Area: supremeArea, Average_Solar_Irridation__W_sq_m_: irridation) else {
                             fatalError("Unexpected runtime error.")
                         }
                         
                         let monthlySavings = monthlySavingsPrediction.Monthly_Savings
                         
                         globalCostSaving = globalCostSaving + monthlySavings.rounded(toPlaces: 2)
+                        
+                        let confettiView = SAConfettiView(frame: self.view.bounds)
+                        self.view.addSubview(confettiView)
+
+                        confettiView.startConfetti()
+                        
+                        let alert = CDAlertView(title: "Yay!", message: "Welcome to the green revolution with SolarX. Your estimated instalation cost is Rs. \(Int(cost)). You can save an average of Rs. 16000 with the recommended subsidy - GBI.", type: .success)
+                        let doneAction = CDAlertViewAction(title: "Got it! 🌞")
+                        alert.add(action: doneAction)
+                        alert.show()
+                        
+                        let seconds = 5.0
+                        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+                            self.showSimpleActionSheet(controller: self, localCost: Int(cost), savings: Int(monthlySavings), co2: Int(co2Mitigation))
+                            confettiView.stopConfetti()
+                        }
+                       
                     }
                     
-                    let confettiView = SAConfettiView(frame: self.view.bounds)
-                    self.view.addSubview(confettiView)
-
-                    confettiView.startConfetti()
-                    
-                    let alert = CDAlertView(title: "Yay!", message: "Welcome to the green revolution with SolarX.", type: .success)
-                    alert.show()
-                    
-                    self.showSimpleActionSheet(controller: self, localCost: localCost)
                 }
                 
             }
@@ -146,8 +154,13 @@ class AddPanelVC: UIViewController {
         }
     
     
-    func showSimpleActionSheet(controller: UIViewController, localCost: Int) {
-            let alert = UIAlertController(title: "Yay!", message: "Welcome to the green revolution with SolarX. Your estimated instalation cost is \(localCost). You can save an average of Rs. 16000 with the recommended subsidy - GBI.", preferredStyle: .actionSheet)
+    func showSimpleActionSheet(controller: UIViewController, localCost: Int, savings: Int, co2: Int) {
+            let mes = """
+            Installation cost: Rs. \(localCost)
+            Expected monthly savings: Rs. \(savings)
+            Lifetime CO2 Mitigation: \(co2) mt
+            """
+            let alert = UIAlertController(title: "Savings Summary", message: mes, preferredStyle: .actionSheet)
             alert.addAction(UIAlertAction(title: "GBI Scheme", style: .default, handler: { (_) in
                 subsidyNumber = 0
                 if let url = URL(string: "https://www.tatapower-ddl.com/solar-rooftop/register"),
@@ -172,7 +185,7 @@ class AddPanelVC: UIViewController {
             }))
 
             self.present(alert, animated: true, completion: {
-                print("completion block")
+                
             })
         }
     

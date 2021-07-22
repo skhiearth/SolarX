@@ -1,89 +1,41 @@
 //
-//  ARAdderViewViewController.swift
+//  MapView.swift
 //  SolarX
-//
-//  Created by Simran Gogia and Utkarsh Sharma on 18/07/21.
 //
 
 import UIKit
-import SceneKit
-import ARKit
+import WebKit
 import CDAlertView
-import SVProgressHUD
-import CoreML
 import SAConfettiView
 
-class ARAdderViewController: UIViewController, ARSCNViewDelegate {
+class MapView: UIViewController, WKNavigationDelegate {
 
-    @IBOutlet weak var captureButton: UIButton!
-    @IBOutlet weak var sceneView: ARSCNView!
-    var percentageLabel: UITextField!
-    var grids = [Grid]()
+    @IBOutlet weak var webContainerView: UIView!
+    var webView: WKWebView!
     
+    var percentageLabel: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let contentController = WKUserContentController()
+            let script = "var el = document.getElementById('YourDivID'); if (el) el.parentNode.removeChild(el);"
+        let scriptInjection = WKUserScript(source: script as String, injectionTime: WKUserScriptInjectionTime.atDocumentEnd, forMainFrameOnly: false)
+            contentController.addUserScript(scriptInjection)
+            let config = WKWebViewConfiguration()
+            config.userContentController = contentController
         
-        if let image = UIImage(named: "redSnap.png") {
-            captureButton.setImage(image, for: .normal)
-        }
-        
-        // Set the view's delegate
-        sceneView.delegate = self
-        
-        // Show statistics such as fps and timing information
-        sceneView.debugOptions = ARSCNDebugOptions.showFeaturePoints
-        
-        // Create a new scene
-        let scene = SCNScene()
-        
-        supremeArea = 0.0
-        
-        // Set the scene to the view
-        sceneView.scene = scene
+        webView = WKWebView(frame: webContainerView.bounds, configuration: config)
+        webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.webView.scrollView.contentInset = UIEdgeInsets(top: -50, left: 0, bottom: 0, right: 0)
+        self.webContainerView.addSubview(webView)
+        let myURL = URL(string: "https://www.calcmaps.com/map-area/")
+        let myRequest = URLRequest(url: myURL!)
+        webView.load(myRequest)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        // Create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
-        configuration.planeDetection = .horizontal
-
-        // Run the view's session
-        sceneView.session.run(configuration)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        // Pause the view's session
-        sceneView.session.pause()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Release any cached data, images, etc that aren't in use.
-    }
-
-    @IBAction func snapBtnPressed(_ sender: Any) {
-        if(supremeArea == 0.0){
-            
-            let alert = CDAlertView(title: "Something went wrong", message: "No horizontal plane detected. Please try again.", type: .error)
-            alert.show()
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 4.0, execute: {
-                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MainVC") as! ViewController
-                nextViewController.modalPresentationStyle = .fullScreen
-                self.present(nextViewController, animated:true, completion:nil)
-            })
-
-        } else {
-
-            displayForm(message: "A few more details. What percentage of this area do you want to use for solar installation?")
-
-        }
+    @IBAction func calculateBtnPressed(_ sender: Any) {
+        displayForm(message: "A few more details. What percentage of this area do you want to use for solar installation?")
     }
     
     func displayForm(message:String){
@@ -105,6 +57,7 @@ class ARAdderViewController: UIViewController, ARSCNViewDelegate {
                 
                 DispatchQueue.main.async {
                     percentage = Double(self.percentageLabel.text!)!
+                    supremeArea = 100.0
 
                     DispatchQueue.main.async {
                         
@@ -216,56 +169,4 @@ class ARAdderViewController: UIViewController, ARSCNViewDelegate {
                 
             })
         }
-    
-    // MARK: - ARSCNViewDelegate
-        
-    /*
-        // Override to create and configure nodes for anchors added to the view's session.
-        func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-            let node = SCNNode()
-         
-            return node
-        }
-    */
-        
-        func session(_ session: ARSession, didFailWithError error: Error) {
-            // Present an error message to the user
-            
-        }
-        
-        func sessionWasInterrupted(_ session: ARSession) {
-            // Inform the user that the session has been interrupted, for example, by presenting an overlay
-            
-        }
-        
-        func sessionInterruptionEnded(_ session: ARSession) {
-            // Reset tracking and/or remove existing anchors if consistent tracking is required
-            
-        }
-        
-        // 1.
-        func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-            let grid = Grid(anchor: anchor as! ARPlaneAnchor)
-            self.grids.append(grid)
-            node.addChildNode(grid)
-            if let image = UIImage(named: "greenSnap.png") {
-                DispatchQueue.main.async {
-                    self.captureButton.setImage(image, for: .normal)
-                }
-            }
-        }
-    
-        // 2.
-        func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
-            let grid = self.grids.filter { grid in
-                return grid.anchor.identifier == anchor.identifier
-            }.first
-            
-            guard let foundGrid = grid else {
-                return
-            }
-            
-            foundGrid.update(anchor: anchor as! ARPlaneAnchor)
-        }
-
 }

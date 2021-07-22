@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Solar uses camera information for precision AR mapping</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Location data allows us to render personalised subsidies and contractors for you</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
