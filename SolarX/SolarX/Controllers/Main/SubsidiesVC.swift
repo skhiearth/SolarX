@@ -12,13 +12,17 @@ class SubsidiesVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     @IBOutlet weak var seegmentedControl: UISegmentedControl!
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var contractorsTableView: UITableView!
     
     var selectionType = "Subsidies"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
+        
+        tableView.isHidden = false
     }
     
     @IBAction func segmentedControlValueChanged(_ sender: Any) {
@@ -31,6 +35,7 @@ class SubsidiesVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
                 tableView.reloadData()
             case 2:
                 selectionType = "Contractors"
+                tableView.reloadData()
             default:
                 break;
         }
@@ -38,23 +43,31 @@ class SubsidiesVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch selectionType {
-        case "Subsidies":
-            return subsidies.count
-        case "Products":
-            return products.count
-        case "Contractors":
-            return contractors.count
-        default:
-            return subsidies.count
+            case "Subsidies":
+                return subsidies.count
+            case "Products":
+                return products.count
+            case "Contractors":
+                return contractors.count
+            default:
+                return subsidies.count
         }
-        
     }
+
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SubsidiesCell", for: indexPath) as? SubsidiesCell
-        
         cell?.selectionStyle = .none
+        
         if(selectionType == "Subsidies"){
+            cell?.nameLbl.isHidden = true
+            cell?.addressLbl.isHidden = true
+            cell?.starsImg.isHidden = true
+            
+            cell?.titleLb.isHidden = false
+            cell?.statusLbl.isHidden = false
+            cell?.displayImage.isHidden = false
+            
             cell?.titleLb.text = subsidies[indexPath.row]!["Name"]
             cell?.statusLbl.text = subsidies[indexPath.row]!["Status"]
             cell?.displayImage.image = UIImage(named: subsidies[indexPath.row]!["Image"]!)
@@ -64,7 +77,16 @@ class SubsidiesVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             } else {
                 cell?.arrowImage.image = UIImage(named:"CaretRightGreen")
             }
+            
         } else if(selectionType == "Products"){
+            cell?.nameLbl.isHidden = true
+            cell?.addressLbl.isHidden = true
+            cell?.starsImg.isHidden = true
+            
+            cell?.titleLb.isHidden = false
+            cell?.statusLbl.isHidden = false
+            cell?.displayImage.isHidden = false
+            
             cell?.titleLb.text = products[indexPath.row]!["Name"]
             cell?.statusLbl.text = products[indexPath.row]!["Status"]
             cell?.displayImage.image = UIImage(named: products[indexPath.row]!["Image"]!)
@@ -74,6 +96,20 @@ class SubsidiesVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             } else {
                 cell?.arrowImage.image = UIImage(named:"CaretRightGreen")
             }
+        } else if(selectionType == "Contractors"){
+            cell?.nameLbl.isHidden = false
+            cell?.addressLbl.isHidden = false
+            cell?.starsImg.isHidden = false
+            
+            cell?.titleLb.isHidden = true
+            cell?.statusLbl.isHidden = true
+            cell?.displayImage.isHidden = true
+            
+            cell?.nameLbl.text = contractors[indexPath.row]!["Name"]
+            cell?.addressLbl.text = contractors[indexPath.row]!["Address"]
+            cell?.starsImg.image = UIImage(named: contractors[indexPath.row]!["Image"]!)
+            
+            cell?.arrowImage.image = UIImage(named:"CaretRightGreen")
         }
         
         return cell!

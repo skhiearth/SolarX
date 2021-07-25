@@ -14,6 +14,10 @@ class SubsidiesCell: UITableViewCell {
     @IBOutlet weak var statusLbl: UILabel!
     @IBOutlet weak var arrowImage: UIImageView!
     
+    @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var addressLbl: UILabel!
+    @IBOutlet weak var starsImg: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         

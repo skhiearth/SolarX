@@ -232,7 +232,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T7j-8z-gXo">
                                 <rect key="frame" x="20" y="135" width="374" height="144"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 45" translatesAutoresizingMaskIntoConstraints="NO" id="ckC-CT-6If">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 45-1" translatesAutoresizingMaskIntoConstraints="NO" id="ckC-CT-6If">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="144"/>
                                     </imageView>
                                 </subviews>
@@ -296,6 +296,7 @@
                                         <state key="normal" image="Group 90"/>
                                         <connections>
                                             <action selector="skipToMap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E65-6D-EnE"/>
+                                            <segue destination="Vip-nP-9iE" kind="show" id="7oX-5q-O69"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkI-dp-8V9">
@@ -753,8 +754,28 @@ Verified contractors.</string>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMy-tr-obN">
+                                                            <rect key="frame" x="34" y="18" width="200" height="24"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="200" id="C2y-Z0-gjT"/>
+                                                                <constraint firstAttribute="height" constant="24" id="O18-QR-EZ4"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDi-pP-iCh">
                                                             <rect key="frame" x="319" y="72" width="27" height="12"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6s1-QD-UyF">
+                                                            <rect key="frame" x="34" y="45" width="240" height="12"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="240" id="0pW-Mc-Gzi"/>
+                                                                <constraint firstAttribute="height" constant="12" id="KcL-tN-3Y4"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -762,19 +783,34 @@ Verified contractors.</string>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CaretRightGreen" translatesAutoresizingMaskIntoConstraints="NO" id="JoH-dz-ydG">
                                                             <rect key="frame" x="329" y="38.5" width="17" height="19"/>
                                                         </imageView>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SWO-Rq-g17">
+                                                            <rect key="frame" x="34" y="62" width="124" height="22"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="22" id="CMs-FT-XZt"/>
+                                                                <constraint firstAttribute="width" constant="124" id="D6r-QH-rKb"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="JoH-dz-ydG" firstAttribute="centerY" secondItem="lSA-dp-Wdx" secondAttribute="centerY" id="2GM-vh-ltm"/>
+                                                        <constraint firstItem="sMy-tr-obN" firstAttribute="leading" secondItem="lSA-dp-Wdx" secondAttribute="leading" constant="34" id="2cI-KA-2fK"/>
                                                         <constraint firstItem="JHV-az-pOH" firstAttribute="centerY" secondItem="lSA-dp-Wdx" secondAttribute="centerY" id="2i4-ST-Hu4"/>
                                                         <constraint firstAttribute="trailing" secondItem="0qW-uD-fr2" secondAttribute="trailing" id="7CO-0j-CPT"/>
+                                                        <constraint firstItem="SWO-Rq-g17" firstAttribute="leading" secondItem="lSA-dp-Wdx" secondAttribute="leading" constant="34" id="8K1-5D-HtT"/>
                                                         <constraint firstAttribute="bottom" secondItem="0qW-uD-fr2" secondAttribute="bottom" id="8pt-Mo-8zh"/>
                                                         <constraint firstItem="6mV-qe-fXT" firstAttribute="leading" secondItem="JHV-az-pOH" secondAttribute="trailing" constant="30" id="CCc-P5-EsV"/>
                                                         <constraint firstAttribute="trailing" secondItem="aDi-pP-iCh" secondAttribute="trailing" constant="28" id="CK4-qc-Bgh"/>
                                                         <constraint firstItem="0qW-uD-fr2" firstAttribute="leading" secondItem="lSA-dp-Wdx" secondAttribute="leading" id="J5k-kr-0Bj"/>
+                                                        <constraint firstAttribute="bottom" secondItem="SWO-Rq-g17" secondAttribute="bottom" constant="12" id="Ldt-RE-bNW"/>
                                                         <constraint firstItem="6mV-qe-fXT" firstAttribute="centerY" secondItem="lSA-dp-Wdx" secondAttribute="centerY" id="OtM-9B-i8p"/>
+                                                        <constraint firstAttribute="bottom" secondItem="SWO-Rq-g17" secondAttribute="bottom" constant="12" id="Wdz-dj-oSt"/>
+                                                        <constraint firstItem="sMy-tr-obN" firstAttribute="top" secondItem="lSA-dp-Wdx" secondAttribute="top" constant="18" id="ZhW-t0-9WY"/>
+                                                        <constraint firstItem="6s1-QD-UyF" firstAttribute="top" secondItem="sMy-tr-obN" secondAttribute="bottom" constant="3" id="dVM-zr-oYU"/>
                                                         <constraint firstAttribute="trailing" secondItem="JoH-dz-ydG" secondAttribute="trailing" constant="28" id="iIP-Mt-r9z"/>
                                                         <constraint firstItem="0qW-uD-fr2" firstAttribute="top" secondItem="lSA-dp-Wdx" secondAttribute="top" id="iSF-PA-iyb"/>
+                                                        <constraint firstItem="6s1-QD-UyF" firstAttribute="leading" secondItem="lSA-dp-Wdx" secondAttribute="leading" constant="34" id="jVE-2P-VCg"/>
+                                                        <constraint firstItem="SWO-Rq-g17" firstAttribute="leading" secondItem="lSA-dp-Wdx" secondAttribute="leading" constant="34" id="oap-YT-OD9"/>
                                                         <constraint firstAttribute="bottom" secondItem="aDi-pP-iCh" secondAttribute="bottom" constant="12" id="r0A-8Q-nuY"/>
                                                         <constraint firstItem="JHV-az-pOH" firstAttribute="leading" secondItem="lSA-dp-Wdx" secondAttribute="leading" constant="34" id="rUc-2Y-wC2"/>
                                                     </constraints>
@@ -790,8 +826,11 @@ Verified contractors.</string>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="addressLbl" destination="6s1-QD-UyF" id="dHg-lo-94w"/>
                                             <outlet property="arrowImage" destination="JoH-dz-ydG" id="S6H-aI-Msl"/>
                                             <outlet property="displayImage" destination="JHV-az-pOH" id="szn-Sa-1tX"/>
+                                            <outlet property="nameLbl" destination="sMy-tr-obN" id="F08-ba-BEV"/>
+                                            <outlet property="starsImg" destination="SWO-Rq-g17" id="FsC-yh-jSj"/>
                                             <outlet property="statusLbl" destination="aDi-pP-iCh" id="h2A-jF-IGU"/>
                                             <outlet property="titleLb" destination="6mV-qe-fXT" id="zly-Le-LSX"/>
                                         </connections>
@@ -993,8 +1032,8 @@ Better for the planet.</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 subsidies panel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCI-Rn-E2J">
-                                        <rect key="frame" x="21" y="64" width="117" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 subsidised panel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCI-Rn-E2J">
+                                        <rect key="frame" x="21" y="64" width="126" height="18"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
@@ -1051,7 +1090,8 @@ Better for the planet.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="eRE-mL-8Vu"/>
+        <segue reference="7oX-5q-O69"/>
+        <segue reference="GKM-ZP-F06"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="CamRed" width="141" height="60"/>
@@ -1066,7 +1106,7 @@ Better for the planet.</string>
         <image name="Group 110" width="53" height="53"/>
         <image name="Group 111" width="53" height="53"/>
         <image name="Group 112" width="374" height="68"/>
-        <image name="Group 45" width="333" height="129"/>
+        <image name="Group 45-1" width="333" height="129"/>
         <image name="Group 67" width="292" height="72"/>
         <image name="Group 88" width="292" height="72"/>
         <image name="Group 90" width="60" height="60"/>
