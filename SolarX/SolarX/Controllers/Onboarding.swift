@@ -32,11 +32,11 @@ class Onboarding: UIViewController, CLLocationManagerDelegate, UIPickerViewDeleg
         switch status {
         case .notDetermined:
             locbtn.setImage(UIImage(named: "LocRed.png"), for: .normal)
-            locationManager?.requestWhenInUseAuthorization()
+//            locationManager?.requestWhenInUseAuthorization()
             return
         case .denied, .restricted:
             locbtn.setImage(UIImage(named: "LocRed.png"), for: .normal)
-            locationManager?.requestWhenInUseAuthorization()
+//            locationManager?.requestWhenInUseAuthorization()
             return
         case .authorizedAlways, .authorizedWhenInUse:
             locbtn.setImage(UIImage(named: "LocGreen.png"), for: .normal)

@@ -53,7 +53,7 @@ var subsidies = [
 var products = [
     0: [
         "Name": "Luminous Solar Home Solution NXG1100",
-        "Image": "plug 2",
+        "Image": "lum",
         "Status": "",
         "Level": "Medium",
         "URL": "https://www.amazon.in/Luminous-Solution-NXG1100-Tubular-Battery/dp/B076FXSMB7/ref=asc_df_B076FXSMB7/?tag=googleshopdes-21&linkCode=df0&hvadid=397009722436&hvpos=&hvnetw=g&hvrand=10512197188635048409&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9061676&hvtargid=pla-852592115474&psc=1&ext_vrnc=hi",
@@ -61,7 +61,7 @@ var products = [
     ],
     1: [
         "Name": "Luminous Solar Panel 40 Watt 12 Volt",
-        "Image": "image 7",
+        "Image": "sec",
         "Status": "Already Granted",
         "Level": "Low",
         "URL": "https://www.amazon.in/dp/B07T93HVQK/ref=sspa_dk_detail_0?psc=1&pd_rd_i=B07T93HVQK&pd_rd_w=RvliB&pf_rd_p=db6d779c-107a-4ad8-b18a-bef254d1f928&pd_rd_wg=JLGdu&pf_rd_r=DGJSFX7KTFHGKDRB9VRY&pd_rd_r=b82ad8fd-553e-4434-9671-b971981ed221&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFMUjRPTjhHVllURFcmZW5jcnlwdGVkSWQ9QTA5NDEwNDk4UUZDNzRBOVJXOUcmZW5jcnlwdGVkQWRJZD1BMDI0Njg4MzFJUkY1SUNCSUhMM1gmd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWMmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl",
@@ -69,7 +69,7 @@ var products = [
     ],
     2: [
         "Name": "Adani 370W/30V Monocrystalline Perc Solar Panel",
-        "Image": "plug 2",
+        "Image": "adani",
         "Status": "",
         "Level": "Medium",
         "URL": "https://www.industrybuying.com/solar-panels-adani-SOL.SOL.62264078/?utm_source=Google&utm_medium=PLA&utm_campaign=PLA_New_Solar",
@@ -77,7 +77,7 @@ var products = [
     ],
     3: [
         "Name": "Loom Solar Panel - Shark 440",
-        "Image": "image 8",
+        "Image": "loom",
         "Status": "",
         "Level": "High",
         "URL": "https://www.loomsolar.com/products/loom-solar-panel-shark-super-high-efficiency-module?variant=14358715138091&currency=INR&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&utm_campaign=gs-2021-01-01&utm_source=google&utm_medium=smart_campaign",
@@ -85,7 +85,7 @@ var products = [
     ],
     4: [
         "Name": "Loom solar panel 40 watt 12 volt poly crystalline",
-        "Image": "plug 3",
+        "Image": "loom2",
         "Status": "Already Granted",
         "Level": "Low",
         "URL": "https://www.loomsolar.com/products/loom-40-watt-12-v-solar-panel-polycrystalline",

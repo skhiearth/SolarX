@@ -84,11 +84,10 @@ class SubsidiesVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             cell?.starsImg.isHidden = true
             
             cell?.titleLb.isHidden = false
-            cell?.statusLbl.isHidden = false
+            cell?.statusLbl.isHidden = true
             cell?.displayImage.isHidden = false
             
             cell?.titleLb.text = products[indexPath.row]!["Name"]
-            cell?.statusLbl.text = products[indexPath.row]!["Status"]
             cell?.displayImage.image = UIImage(named: products[indexPath.row]!["Image"]!)
             
             if(products[indexPath.row]!["Status"] == "Already Granted"){

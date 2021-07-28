@@ -503,7 +503,7 @@
         <!--Adder View Controller-->
         <scene sceneID="ofp-jr-7B5">
             <objects>
-                <viewController id="12X-Px-zYW" customClass="ARAdderViewController" customModule="SolarX" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ARAdderViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="12X-Px-zYW" customClass="ARAdderViewController" customModule="SolarX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PDI-wS-4WB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -518,6 +518,9 @@
                                             <constraint firstAttribute="height" constant="80" id="ZK0-ch-rI5"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="cameraCapture"/>
+                                        <connections>
+                                            <action selector="snapBtnPressed:" destination="12X-Px-zYW" eventType="touchUpInside" id="Pab-8j-jlY"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 9" translatesAutoresizingMaskIntoConstraints="NO" id="Ced-T3-Frd">
                                         <rect key="frame" x="177.5" y="0.0" width="59" height="56"/>
